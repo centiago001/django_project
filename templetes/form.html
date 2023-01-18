@@ -1,0 +1,196 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from codervent.com/syndron/demo/vertical/form-layouts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 12:04:41 GMT -->
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<!--plugins-->
+	<link href="/static/assets/plugins/simplebar/css/simplebar.css " rel="stylesheet" />
+	<link href="/static/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css " rel="stylesheet" />
+	<link href="/static/assets/plugins/metismenu/css/metisMenu.min.css " rel="stylesheet" />
+	<!-- loader-->
+	<link href="/static/assets/css/pace.min.css %}" rel="stylesheet" />
+	<script src="/static/assets/js/pace.min.js %}"></script>
+	<!-- Bootstrap CSS -->
+	<link href="/static/assets/css/bootstrap.min.css  " rel="stylesheet">
+	<link href="/static/assets/css/bootstrap-extended.css  " rel="stylesheet">
+	<link href="/static/assets/css/app.css %} " rel="stylesheet">
+	<link href="/static/assets/css/icons.css %}" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="/static/assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="/static/assets/css/semi-dark.css " />
+	<link rel="stylesheet" href="/static/assets/css/header-colors.css " />
+	<title>Registration form</title>
+</head>
+
+<body style="margin: 0%; background-size:contain;">
+
+	<nav class="navbar navbar-light " style="background-color: #0dcaf0;">
+		<div class="container-fluid">
+		  <a class="navbar-brand" style="color: grey;">WEB-MEDIA</a>
+		  <form class="d-flex">
+			<a href="pan/"><button class="btn btn-outline-secondary" type="button">Admin</button></a>
+		  </form>
+		</div>
+	  </nav>
+
+<div style="margin-top: 10px;"></div>
+	<!--wrapper-->
+	<form action="f_submits/" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+	<div class="wrapper"style="margin-top: auto;">
+		<div class="page-content">
+			<!--breadcrumb-->
+			<div class="row">
+				<div class="col-xl-6 mx-auto" >
+					
+					<div class="card border-top border-0 border-4 border-info"  >
+						<div class="card-body">
+							<div class="border p-4 rounded">
+								<div class="card-title d-flex align-items-center">
+									<div><i class="bx bxs-user me-1 font-22 text-info"></i>
+									</div>
+									<h5 class="mb-0 text-info">User Registration</h5>
+								</div>
+								<hr/>
+								<div class="row mb-3">
+									<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Your Name</label>
+									<div class="col-sm-9">
+										<input type="text" name='FIRSTNAME' class="form-control" id="inputEnterYourName" placeholder="Enter Your Name" required>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<label for="inputPhoneNo2" class="col-sm-3 col-form-label">Designations</label>
+									<div class="col-sm-9">
+										<input type="text" name='desigination' class="form-control" id="inputPhoneNo2" placeholder="Designations"required>
+									</div>
+								</div>
+								 
+								<div class="row mb-3">
+									<label for="inputPhoneNo" class="col-sm-3 col-form-label">Qualification</label>
+									<div class="col-sm-9">
+										<input type="text" name="qulification" class="form-control" id="inputPhoneNo" placeholder="Qualification"required>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<label for="inputPhoneN" class="col-sm-3 col-form-label">Experiance</label>
+									<div class="col-sm-9">
+										<input type="text" name="experince" class="form-control" id="inputPhoneN" placeholder="experiance"required>
+									</div>
+								</div>
+
+								<div class="row mb-3">
+									<label for="inputPhone" class="col-sm-3 col-form-label">Expert Areas</label>
+									<div class="col-sm-9">
+										<input type="text" name="expertarea" class="form-control" id="inputPhone" placeholder="Expert area"required>
+									</div>
+								</div>
+
+
+								<div class="row mb-3">
+									<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Email Address</label>
+									<div class="col-sm-9">
+										<input type="email" name="email" class="form-control" id="inputEmailAddress2" placeholder="Email Address"required>
+									</div>
+								</div>
+
+
+								<div class="row mb-3">
+									<label for="inputPhon" class="col-sm-3 col-form-label">Phone No</label>
+									<div class="col-sm-9">
+										<input type="text" name="mob" class="form-control" id="inputPhon" placeholder="Phone no"required>
+									</div>
+								</div>
+
+
+								<div class="row mb-3">
+									<label for="inputPho" class="col-sm-3 col-form-label">Image</label>
+									<div class="col-sm-9">
+										<input type="file" name="image" class="form-control" id="inputPho" placeholder="image"required>
+									</div>
+								</div>
+
+
+								<div class="row mb-3">
+									<label for="inputPhoneNo2" class="col-sm-3 col-form-label">Resume</label>
+									<div class="col-sm-9">
+										<input type="file"name="profile" class="form-control" id="inputPhoneNo2" placeholder="Resume"required>
+									</div>
+								</div>
+
+								<div class="row mb-3">
+									<label for="inputAddress4" class="col-sm-3 col-form-label"></label>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 col-form-label"></label>
+									<div class="col-sm-9">
+										<button type="submit" class="btn btn-info px-5">Register</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end row-->
+		</div>
+	</div>
+	<!--end wrapper-->
+</form>
+	<!--start switcher-->
+
+
+
+
+    <footer class="bg-light text-center text-lg-start" style="background-size: cover;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <form action="">
+            <!--Grid row-->
+            <div class="row">
+                <marquee behavior="" direction=""> <H3 style="background-image: linear-gradient(#0dcaf0,yellow); max-width: fit-content;"><strong>Registration open</strong></h3></marquee>
+              <!--Grid column-->
+              <div class="col-auto mb-4 mb-md-0">
+                
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-md-5 col-12 mb-4 mb-md-0">
+              </div>
+              
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-dark" href="http://webmediasolutions.in/">WEB-MEDIA.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+	
+	<!--end switcher-->
+	<!-- Bootstrap JS -->
+	<script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="/static/assets/js/jquery.min.js"></script>
+	<script src="/static/assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="/static/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="/static/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!--app JS-->
+	<script src="/static/assets/js/app.js "></script>
+</body>
+
+
+<!-- Mirrored from codervent.com/syndron/demo/vertical/form-layouts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 12:04:41 GMT -->
+</html>

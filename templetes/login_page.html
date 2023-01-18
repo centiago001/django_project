@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from codervent.com/syndron/demo/vertical/authentication-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 12:04:49 GMT -->
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<!--plugins-->
+	<link href="/static/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="/static/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="/static/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="/static/assets/css/pace.min.css" rel="stylesheet" />
+	<script src="/static/assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="/static/assets/css/app.css" rel="stylesheet">
+	<link href="/static/assets/css/icons.css" rel="stylesheet">
+	<title>admin-login</title>
+</head>
+
+<body class="bg-login">
+	<!--wrapper-->
+	<div class="wrapper">
+		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
+			<div class="container-fluid">
+				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+					<div class="col mx-auto">
+						<!-- <div class="mb-4 text-center">
+							<img src="assets/images/logo-img.png" width="180" alt="" />
+						</div> -->
+						<div class="card" style="height: 500px; background-color:rgba(0,0,0,0.6); color:aliceblue;">
+							<div class="card-body" style="height: 480px;">
+								<div class="border p-4 rounded" style="height: 450px;">
+									<div class="text-center">
+										<h3 class="" style="color: aliceblue;">ADMIN LOGIN</h3>
+										
+									</div>
+									
+									<div class="form-body" style="margin-top: 15%;">
+										<form class="row g-3"  action="/login/" method="POST">
+											{% csrf_token %}
+											<div class="col-12">
+												<label for="inputEmailAddress" class="form-label">USER NAME</label>
+												<input type="text" class="form-control" name="username" id="inputEmailAddress" placeholder="Email Address">
+											</div>
+											<div class="col-12">
+												<label for="inputChoosePassword" class="form-label">PASSWORD</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0" name="password" id="inputChoosePassword"  placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+												</div>
+											</div>
+											<br><br>
+											<div class="col-12" style="margin-top: 5%;">
+												<div class="d-grid">
+													<button type="submit" class="btn btn-primary" style="background-color: gray;"><i class="bx bxs-lock-open"></i>LOGIN</button>
+												</div>
+											</div><br><br>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+			</div>
+		</div>
+	</div>
+	<!--end wrapper-->
+	<!-- Bootstrap JS -->
+	<script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="/static/assets/js/jquery.min.js"></script>
+	<script src="/static/assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="/static/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="/static/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!--Password show & hide js -->
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				if ($('#show_hide_password input').attr("type") == "text") {
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass("bx-hide");
+					$('#show_hide_password i').removeClass("bx-show");
+				} else if ($('#show_hide_password input').attr("type") == "password") {
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass("bx-hide");
+					$('#show_hide_password i').addClass("bx-show");
+				}
+			});
+		});
+	</script>
+	
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+</body>
+
+
+<!-- Mirrored from codervent.com/syndron/demo/vertical/authentication-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 12:04:49 GMT -->
+</html>
